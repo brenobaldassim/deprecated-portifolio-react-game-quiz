@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import React from "react";
+import { shallow } from "enzyme";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("[UNIT] Testing the app component", () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
+  describe("Component valdiation", () => {
+    it("displays 0 as a default value", () => {
+      expect(wrapper.find("h1").text()).toContain("0");
+    });
+  });
 });

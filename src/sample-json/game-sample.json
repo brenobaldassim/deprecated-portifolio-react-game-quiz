@@ -1,0 +1,98 @@
+{
+  "id": 11859,
+  "slug": "team-fortress-2",
+  "name": "Team Fortress 2",
+  "released": "2007-10-10",
+  "tba": false,
+  "background_image": "https://media.rawg.io/media/games/46d/46d98e6910fbc0706e2948a7cc9b10c5.jpg",
+  "rating": 3.68,
+  "rating_top": 4,
+  "ratings": [
+    {
+      "id": 4,
+      "title": "recommended",
+      "count": 1297,
+      "percent": 45.27
+    },
+    "{count: 691, id: 3, percent: 24.12, title: \"meh\"}",
+    "{count: 599, id: 5, percent: 20.91, title: \"excepti…}",
+    "{count: 278, id: 1, percent: 9.7, title: \"skip\"}"
+  ],
+  "ratings_count": 2838,
+  "reviews_text_count": 19,
+  "added": 13117,
+  "added_by_status": {
+    "yet": 186,
+    "owned": 10139,
+    "beaten": 788,
+    "toplay": 46,
+    "dropped": 1792,
+    "playing": 166
+  },
+  "metacritic": 92,
+  "playtime": 9,
+  "suggestions_count": 533,
+  "updated": "2024-04-22T22:35:16",
+  "user_game": null,
+  "reviews_count": 2865,
+  "saturated_color": "0f0f0f",
+  "dominant_color": "0f0f0f",
+  "platforms": [
+    "{platform: {…}, released_at: \"2007-10-10\", requirem…}",
+    "{platform: {…}, released_at: \"2007-10-10\", requirem…}",
+    "{platform: {…}, released_at: \"2007-10-10\", requirem…}"
+  ],
+  "parent_platforms": ["{platform: {…}}", "{platform: {…}}", "{platform: {…}}"],
+  "genres": [
+    "{games_count: 179305, id: 4, image_background: \"htt…}",
+    "{games_count: 59474, id: 2, image_background: \"http…}"
+  ],
+  "stores": ["{id: 13018, store: {…}}"],
+  "clip": null,
+  "tags": [
+    "{games_count: 36657, id: 40847, image_background: \"…}",
+    "{games_count: 37503, id: 7, image_background: \"http…}",
+    "{games_count: 7569, id: 7808, image_background: \"ht…}",
+    "{games_count: 11289, id: 18, image_background: \"htt…}",
+    "{games_count: 4818, id: 411, image_background: \"htt…}",
+    "{games_count: 31080, id: 8, image_background: \"http…}",
+    "{games_count: 11441, id: 40845, image_background: \"…}",
+    "{games_count: 13046, id: 30, image_background: \"htt…}",
+    "{games_count: 5356, id: 9, image_background: \"https…}",
+    "{games_count: 24439, id: 4, image_background: \"http…}",
+    "{games_count: 12144, id: 123, image_background: \"ht…}",
+    "{games_count: 6466, id: 79, image_background: \"http…}",
+    "{games_count: 4935, id: 80, image_background: \"http…}",
+    "{games_count: 4884, id: 11669, image_background: \"h…}",
+    "{games_count: 1466, id: 40852, image_background: \"h…}",
+    "{games_count: 2552, id: 40832, image_background: \"h…}",
+    "{games_count: 1840, id: 40838, image_background: \"h…}",
+    "{games_count: 899, id: 62, image_background: \"https…}",
+    "{games_count: 2510, id: 40837, image_background: \"h…}",
+    "{games_count: 1322, id: 40833, image_background: \"h…}",
+    "{games_count: 4007, id: 125, image_background: \"htt…}",
+    "{games_count: 1534, id: 11, image_background: \"http…}",
+    "{games_count: 105, id: 40856, image_background: \"ht…}",
+    "{games_count: 1126, id: 170, image_background: \"htt…}",
+    "{games_count: 8134, id: 197, image_background: \"htt…}",
+    "{games_count: 268, id: 40834, image_background: \"ht…}",
+    "{games_count: 5248, id: 164, image_background: \"htt…}",
+    "{games_count: 5618, id: 179, image_background: \"htt…}",
+    "{games_count: 579, id: 265, image_background: \"http…}",
+    "{games_count: 1093, id: 245, image_background: \"htt…}"
+  ],
+  "esrb_rating": {
+    "id": 4,
+    "name": "Mature",
+    "slug": "mature"
+  },
+  "short_screenshots": [
+    "{id: -1, image: \"https://media.rawg.io/media/games/…}",
+    "{id: 97905, image: \"https://media.rawg.io/media/scr…}",
+    "{id: 97906, image: \"https://media.rawg.io/media/scr…}",
+    "{id: 97907, image: \"https://media.rawg.io/media/scr…}",
+    "{id: 97908, image: \"https://media.rawg.io/media/scr…}",
+    "{id: 97909, image: \"https://media.rawg.io/media/scr…}",
+    "{id: 97910, image: \"https://media.rawg.io/media/scr…}"
+  ]
+}

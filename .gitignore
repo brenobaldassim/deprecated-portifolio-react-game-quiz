@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#enviroment_variables
+.env
+#
+.prettierignore
+tailwind.config.js
