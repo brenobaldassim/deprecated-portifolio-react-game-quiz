@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import gameReducer from "./gameSlice";
 import genreReducer from "./genreSlice";
-import pointReducer from "./pointSlice";
+import quizReducer from "./quizSlice";
 
 const store = configureStore({
   reducer: {
     game: gameReducer,
     genre: genreReducer,
-    point: pointReducer,
+    quiz: quizReducer,
   },
 });
 
