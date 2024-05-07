@@ -9,4 +9,5 @@ export const pointStatus = {
   idle: "IDLE",
   pointed: "POINTED",
   waiting: "WAITING",
+  completed: "COMPLETED",
 };

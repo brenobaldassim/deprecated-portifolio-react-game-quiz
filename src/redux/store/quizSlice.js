@@ -21,6 +21,9 @@ const quizSlice = createSlice({
     STATUS_WAITING: (state) => {
       state.status = pointStatus.waiting;
     },
+    STATUS_COMPLETED: (state) => {
+      state.status = pointStatus.completed;
+    },
     INCREMENT_LOADER: (state) => {
       state.loader.progress += 1;
     },
@@ -38,6 +41,7 @@ const quizSlice = createSlice({
 export const {
   INCREMENT_POINTS,
   STATUS_WAITING,
+  STATUS_COMPLETED,
   INCREMENT_LOADER,
   RUN_LOADER,
   STOP_LOADER,

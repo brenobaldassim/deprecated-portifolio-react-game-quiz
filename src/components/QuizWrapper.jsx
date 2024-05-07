@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { promiseStatus } from "../redux/constants/constants";
 import {
   INCREMENT_LOADER,
+  STATUS_COMPLETED,
   STATUS_WAITING,
   STOP_LOADER,
 } from "../redux/store/quizSlice";
@@ -14,11 +15,16 @@ import GameImageDisplay from "./GameImageDIsplay";
 import ProgressBar from "./progress_bar/ProgressBar";
 
 let interval = undefined;
+let MAX_INTERVAL = 5;
 
 const QuizWrapper = () => {
   const { status: statusGenre } = useSelector((state) => state.genre);
   const { gameItems, status: statusGame } = useSelector((state) => state.game);
-  const { status: statusPoint, loader } = useSelector((state) => state.quiz);
+  const {
+    points,
+    status: statusPoint,
+    loader,
+  } = useSelector((state) => state.quiz);
   const [game, setGame] = useState({});
   const [index, setIndex] = useState(1);
   const dispatch = useDispatch();
@@ -40,9 +46,11 @@ const QuizWrapper = () => {
   // This is so I can check if an option was selected and it iterates to the next game.
   useEffect(() => {
     if (statusPoint === pointStatus.pointed) {
-      setGame(gameItems[index]);
-      if (gameItems.length > index) setIndex(index + 1);
-      dispatch(STATUS_WAITING());
+      if (gameItems.length > index && index <= MAX_INTERVAL) {
+        setGame(gameItems[index]);
+        setIndex(index + 1);
+        dispatch(STATUS_WAITING());
+      } else dispatch(STATUS_COMPLETED());
     } else if (statusPoint === pointStatus.idle) setGame(gameItems[0]);
   }, [game, gameItems, statusPoint, index, dispatch]);
 
@@ -67,12 +75,16 @@ const QuizWrapper = () => {
     <div className="flex justify-center flex-col items-center w-full h-full">
       <ProgressBar progress={loader.progress} />
       <div className="w-80 md:w-96">
-        {!loader?.isRunning ? (
+        {!loader?.isRunning && statusPoint !== pointStatus.completed ? (
           <div>
             <GameImageDisplay game={game} />
             <OptionsList game={game} />
           </div>
-        ) : null}
+        ) : statusPoint === pointStatus.completed ? (
+          <div>You scored: {points} points</div>
+        ) : (
+          <div>Loading next game</div>
+        )}
       </div>
     </div>
   );
