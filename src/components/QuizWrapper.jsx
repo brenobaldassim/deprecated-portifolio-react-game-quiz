@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { promiseStatus } from "../redux/constants/constants";
 import {
   INCREMENT_LOADER,
-  RUN_LOADER,
   STATUS_WAITING,
   STOP_LOADER,
 } from "../redux/store/quizSlice";
@@ -44,7 +43,6 @@ const QuizWrapper = () => {
       setGame(gameItems[index]);
       if (gameItems.length > index) setIndex(index + 1);
       dispatch(STATUS_WAITING());
-      dispatch(RUN_LOADER());
     } else if (statusPoint === pointStatus.idle) setGame(gameItems[0]);
   }, [game, gameItems, statusPoint, index, dispatch]);
 
@@ -59,16 +57,16 @@ const QuizWrapper = () => {
 
   // So the progress wont break and stop
   useEffect(() => {
-    if (loader.progress == 100) {
+    if (loader.progress === 100) {
       dispatch(STOP_LOADER());
       clearInterval(interval);
     }
   }, [loader.progress]);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center flex-col items-center w-full h-full">
+      <ProgressBar progress={loader.progress} />
       <div className="w-80 md:w-96">
-        <ProgressBar progress={loader.progress} />
         {!loader?.isRunning ? (
           <div>
             <GameImageDisplay game={game} />

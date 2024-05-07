@@ -26,6 +26,7 @@ const quizSlice = createSlice({
     },
     RUN_LOADER: (state) => {
       state.loader.isRunning = true;
+      state.status = pointStatus.pointed;
     },
     STOP_LOADER: (state) => {
       state.loader.isRunning = false;

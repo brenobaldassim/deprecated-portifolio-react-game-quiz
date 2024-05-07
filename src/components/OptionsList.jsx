@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { get4RandomItemsFromArray } from "../utils/utils";
 import { promiseStatus } from "../redux/constants/constants";
-import { INCREMENT_POINTS } from "../redux/store/quizSlice";
+import { INCREMENT_POINTS, RUN_LOADER } from "../redux/store/quizSlice";
 
 const OptionsList = ({ game }) => {
   const [genreOptions, setGenreOptions] = useState([]);
   const { genreItems, status } = useSelector((state) => state.genre);
-  const { points, status: pointStatus } = useSelector((state) => state.quiz);
   const dispatch = useDispatch();
 
   // When fetched all the genres it must create a smaller list so I have the options
@@ -37,6 +36,7 @@ const OptionsList = ({ game }) => {
 
   const handleClick = (event) => {
     if (game?.genres[0].id === +event.target.id) dispatch(INCREMENT_POINTS());
+    dispatch(RUN_LOADER());
   };
 
   return (
