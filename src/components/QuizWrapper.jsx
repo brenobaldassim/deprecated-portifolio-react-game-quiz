@@ -59,7 +59,7 @@ const QuizWrapper = () => {
     if (loader.isRunning) {
       interval = setInterval(() => {
         dispatch(INCREMENT_LOADER());
-      }, 10);
+      }, 20);
     } else clearInterval(interval);
   }, [loader.isRunning]);
 
