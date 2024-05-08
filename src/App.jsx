@@ -1,5 +1,4 @@
 import "./App.css";
-//import AppRouter from './router/AppRouter';
 import QuizWrapper from "./components/QuizWrapper";
 
 function App() {
