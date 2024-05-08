@@ -45,7 +45,7 @@ const OptionsList = ({ game }) => {
         {genreOptions?.map((genre) => {
           return (
             <li
-              className="rounded-md bg-cyan-950 text-white w-full mt-2 p-2 hover:bg-cyan-800 hover:cursor-pointer"
+              className="mt-2 w-full hover:cursor-pointer bg-black/25 shadow rounded-md hover:bg-black text-white p-4"
               key={genre.id}
               id={genre.id}
               onClick={handleClick}

@@ -72,8 +72,7 @@ const QuizWrapper = () => {
   }, [loader.progress]);
 
   return (
-    <div className="flex justify-center flex-col items-center w-full h-full">
-      <ProgressBar progress={loader.progress} />
+    <div className="flex justify-center flex-col items-center w-full h-full drop-shadow-md text-white">
       <div className="w-80 md:w-96">
         {!loader?.isRunning && statusPoint !== pointStatus.completed ? (
           <div>
@@ -81,9 +80,12 @@ const QuizWrapper = () => {
             <OptionsList game={game} />
           </div>
         ) : statusPoint === pointStatus.completed ? (
-          <div>You scored: {points} points</div>
+          <h2 className="text-2xl mt-32">You scored: {points} point(s)</h2>
         ) : (
-          <div>Loading next game</div>
+          <div className="mt-32">
+            <h2 className="text-2xl mb-5">Loading next game</h2>
+            <ProgressBar progress={loader.progress} />
+          </div>
         )}
       </div>
     </div>
