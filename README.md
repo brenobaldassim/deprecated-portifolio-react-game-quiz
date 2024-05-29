@@ -1,4 +1,10 @@
 # PORTIFOLIO REACT GAME QUIZ
 
-## The popouse of this project its to serve as a study case and portifolio of fetching data and use of React Redux and Routing.
-The general idea of this game its pretty simple. The user should start the game and then select what they think its the main genre of the game displayed. If the guess was correct, they score 1 point, if not they dont score. At the end its displayed the total amount of points
+<p>The porpouse of this project it is to serve as a portifolio and study case of React Redux and Routing.</p>
+
+The general idea of this game its pretty simple: 
+1. The user should start the game
+2. Select what they think its the main genre of the game displayed
+3. If the guess was correct, they score 1 point, if not they dont score
+4. At the end its displayed the total amount of point
+
