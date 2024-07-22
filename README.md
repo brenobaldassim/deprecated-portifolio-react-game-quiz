@@ -1,3 +1,5 @@
+> This Repo its DEPRECATED. A new React portifolio repo its going to be added in the future
+
 # PORTIFOLIO REACT GAME QUIZ
 
 <p>The porpouse of this project it is to serve as a portifolio and study case of React Redux and Routing.</p>
